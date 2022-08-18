@@ -2,14 +2,6 @@
     border: 2px solid red;
     background-color: aqua;
 } */
-.login{
-     border: 5px solid aquamarine;
-    background-color:#6993a9; 
-    height:100vh;
-    width:100vw;
-    display:grid;
-    place-items: center;
- }
 
  /* .login_text{
     border: 3px solid green;
@@ -29,6 +21,14 @@
      height: 100px;
      margin-bottom: 40px;
  }
+ .login{
+    border: 5px solid aquamarine;
+   background-color:#6993a9; 
+   height:100vh;
+   width:100vw;
+   display:grid;
+   place-items: center;
+}
  .login_container > button 
  {
      margin-top: 50px;
