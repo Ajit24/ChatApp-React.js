@@ -1,29 +1,39 @@
 import { useState } from 'react';
 import { Route,Routes } from 'react-router-dom';
 import './App.css';
-import Chat from './Components/Chat';
+import Chat from './components/Chat';
+import SignIn from './components/SignIn';
 import Login from './Components/Login';
 import { useStateValue } from './Components/StateProvider';
 
 function App() {
-  const [{user},dispatch]=useStateValue();
+  // const [{user},dispatch]=useStateValue();
 
-  return (
-    <div className="App">
-      {!user?(
-        <Login/>
-      ):(
-        <div className='app_body'>
-          <Routes>
+  // return (
+  //   <div className="App">
+  //     {!user?(
+  //       <Login/>
+  //     ):(
+  //       <div className='app_body'>
+  //         <Routes>
           
-          <Route path="/rooms/:roomId" element={<Chat/>}>
+  //         <Route path="/rooms/:roomId" element={<Chat/>}>
           
-          </Route>
-          </Routes>
-         </div>
-      )}
-    </div>
-    )
+  //         </Route>
+  //         </Routes>
+  //        </div>
+  //     )}
+  //   </div>
+  //   )
+
+  function App() {
+    const [user] = useAuthState(auth)
+    return (
+      <>
+        {user ? <Chat /> : <SignIn />}
+      </>
+    );
+  }
       
     
 }
