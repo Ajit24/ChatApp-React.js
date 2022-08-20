@@ -3,8 +3,10 @@ import { Route,Routes } from 'react-router-dom';
 import './App.css';
 import Chat from './components/Chat';
 import SignIn from './components/SignIn';
-import Login from './Components/Login';
-import { useStateValue } from './Components/StateProvider';
+//import Login from './Components/Login';
+//import { useStateValue } from './Components/StateProvider';
+import { auth } from './firebase.js'
+import { useAuthState } from 'react-firebase-hooks/auth'
 
 function App() {
   // const [{user},dispatch]=useStateValue();
